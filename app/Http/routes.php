@@ -11,6 +11,10 @@
 |
 */
 
+use Service\UserService;
+
 Route::get('/', function () {
-    return view('top');
+    $data = new stdclass;
+    $data->query = UserService::getQuery();
+    return view('top', ['data' => $data]);
 });

@@ -19,7 +19,9 @@
             "database"
         ],
         "psr-4": {
-            "App\\": "app/"
+            "App\\": "app/",
+            "Model\\": "app/Models",
+            "Service\\": "app/Services"
         }
     },
     "autoload-dev": {
