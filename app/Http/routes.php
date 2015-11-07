@@ -18,3 +18,8 @@ Route::get('/', function () {
     $data->query = UserService::getQuery();
     return view('top', ['data' => $data]);
 });
+
+Route::get('test', function () {
+    $prefectures = \DB::table('m_pref')->lists('name', 'id');
+    return view('test',['prefectures' => $prefectures]);
+});
