@@ -1,5 +1,21 @@
 <?php
 
+use Carbon\Carbon;
+    $mysqlOptions['options'] = [];
+ 
+    /*
+    |--------------------------------------------------------------------------
+    | MySQLタイムゾーン
+    |--------------------------------------------------------------------------
+    | MySQL セッションごとにタイムゾーンを指定
+    | 
+     */
+ 
+    if(env('DB_MYSQL_TIMEZONE', false)){
+        $timezoneOffset = sprintf('+%02d:00', Carbon::now()->getOffset() / 3600);
+        $mysqlOptions['options'] += [PDO::MYSQL_ATTR_INIT_COMMAND => 'SET SESSION time_zone = "'.$timezoneOffset.'"'];
+    }
+
 return [
 
     /*
@@ -52,7 +68,7 @@ return [
             'prefix'   => '',
         ],
 
-        'mysql' => [
+        'mysql' => array_merge([
             'driver'    => 'mysql',
             'host'      => env('DB_HOST', 'localhost'),
             'database'  => env('DB_DATABASE', 'forge'),
@@ -62,7 +78,7 @@ return [
             'collation' => 'utf8_unicode_ci',
             'prefix'    => '',
             'strict'    => false,
-        ],
+        ], $mysqlOptions),
 
         'pgsql' => [
             'driver'   => 'pgsql',
