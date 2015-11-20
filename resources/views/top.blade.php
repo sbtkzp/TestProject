@@ -1,4 +1,7 @@
-<?php $title = 'Top Page'?>
+<?php 
+  $title = 'Top Page';
+  $path = asset('/');
+?>
 @extends('layouts.common')
 
 @section('title')
@@ -8,7 +11,7 @@
 @endsection
 
 @section('stylesheets')
-  <link rel="stylesheet" type="text/css" href="css/foundation.css">
+  <link rel="stylesheet" type="text/css" href="{{$path}}css/foundation.css">
 @endsection
 
 @section('main')
