@@ -15,6 +15,7 @@ class DatabaseSeeder extends Seeder
         Model::unguard();
 
         $this->call(PrefectureMasterSeeder::class);
+        $this->call(MunicipalitiesSeeder::class);
 
         Model::reguard();
     }
