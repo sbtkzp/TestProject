@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="ja">
   <head>
     <title>@yield('title')TestProject.com</title>
