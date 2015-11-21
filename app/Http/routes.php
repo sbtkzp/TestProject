@@ -17,5 +17,6 @@ Route::get('/', function () {
     $data = new stdclass;
     $data->queryForUser = Service\Users::getQuery();
     $data->queryForPost = Service\Posts::getQuery();
+    $data->post = Service\Posts::getPostData(1);
     return view('top', ['data' => $data]);
 });

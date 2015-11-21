@@ -16,4 +16,12 @@ class Posts
 
         return $result;
     }
+
+    static function getPostData($id)
+    {
+        $post = Post::find($id);
+
+        return $post;
+    }
+
 }
