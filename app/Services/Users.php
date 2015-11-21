@@ -7,7 +7,7 @@ use Model\User;
 /**
 * 
 */
-class UserService
+class Users
 {
     // Service 使用テスト
     static function getQuery()
