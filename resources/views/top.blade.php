@@ -17,8 +17,8 @@
 @section('main')
   <article>
 
-    <h3><a href="#">{{ $data->queryForPost or '' }}</a></h3>
-    <h6>Written by <a href="#">John Smith</a> on August 12, 2012.</h6>
+    <h3><a href="#">{{ $data->post->title or '' }}</a></h3>
+    <h6>Written by <a href="#">John Smith</a> on {{ $data->post->created_at_formatted or '' }}</h6>
 
     <div class="row">
       <div class="large-6 columns">

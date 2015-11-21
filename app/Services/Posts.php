@@ -9,7 +9,6 @@ use Model\Post;
 */
 class Posts
 {
-    // Service 使用テスト
     static function getQuery()
     {
         $result = Post::toSql();
@@ -17,11 +16,19 @@ class Posts
         return $result;
     }
 
+    // 記事1件取得
     static function getPostData($id)
     {
         $post = Post::find($id);
+        self::setFormattedDate($post);
 
         return $post;
+    }
+
+    private static function setFormattedDate($post)
+    {
+        $post->created_at_formatted = date_format($post->created_at, 'Y年m月d日 G:i');
+        $post->updated_at_formatted = date_format($post->updated_at, 'Y年m月d日 G:i');
     }
 
 }
