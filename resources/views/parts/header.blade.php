@@ -8,7 +8,7 @@
        <li><a href="#" class="button">Link 4</a></li>
       </ul>
     </div>
-    <h1>Blog <small>{{$data->query}}</small></h1>
+    <h1>Blog <small>{{$data->queryForUser or ''}}</small></h1>
     <hr/>
   </div>
 </div>

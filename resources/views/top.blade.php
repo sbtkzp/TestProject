@@ -17,7 +17,7 @@
 @section('main')
   <article>
 
-    <h3><a href="#">Blog Post Title</a></h3>
+    <h3><a href="#">{{ $data->queryForPost or '' }}</a></h3>
     <h6>Written by <a href="#">John Smith</a> on August 12, 2012.</h6>
 
     <div class="row">
