@@ -20,7 +20,3 @@ Route::get('/', function () {
     $data->post = Service\Posts::getPostData(1);
     return view('top', ['data' => $data]);
 });
-
-Route::get('hoge', function () {
-    return 'hogehoge';
-});
