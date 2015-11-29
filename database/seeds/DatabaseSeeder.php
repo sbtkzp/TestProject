@@ -16,6 +16,10 @@ class DatabaseSeeder extends Seeder
 
         $this->call(PrefectureMasterSeeder::class);
         $this->call(MunicipalitiesSeeder::class);
+        $this->call(PostSeeder::class);
+        $this->call(ProfileSeeder::class);
+        $this->call(TodoSeeder::class);
+        $this->call(UserSeeder::class);
 
         Model::reguard();
     }
