@@ -13,7 +13,8 @@ class UserSeeder extends Seeder
     {
         Model\User::create([
             "name"       => "shiba",
-            "email"      => "test@sample.com",
+            "email"      => "test1@sample.com",
+            "password"   => bcrypt("hogehoge"),
             "created_at" => "2015-11-22 03:04:32",
             "updated_at" => "2015-11-22 03:04:32",
         ]);
