@@ -15,7 +15,7 @@ class ProfileSeeder extends Seeder
             "user_id"             => 1,
             "display_name"        => "",
             "display_name_en"     => "",
-            "birthday"            => "0000-00-00 00:00:00",
+            "birthday"            => "0000-00-00",
             "age"                 => 0,
             "postal_number"       => "",
             "address"             => "",

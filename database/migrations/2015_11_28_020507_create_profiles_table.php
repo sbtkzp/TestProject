@@ -18,7 +18,7 @@ class CreateProfilesTable extends Migration
             $table->integer('user_id');
             $table->string('display_name');
             $table->string('display_name_en');
-            $table->datetime('birthday');
+            $table->date('birthday');
             $table->integer('age');
             $table->string('postal_number');
             $table->string('address');
