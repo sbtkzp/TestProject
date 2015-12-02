@@ -57,18 +57,7 @@
 @endsection
      
 @section('sidebar')
-  <h5>Categories</h5>
-  <ul class="side-nav">
-    <li><a href="#">News</a></li>
-    <li><a href="#">Code</a></li>
-    <li><a href="#">Design</a></li>
-    <li><a href="#">Fun</a></li>
-    <li><a href="#">Weasels</a></li>
-  </ul>
+  @include('parts.static.menu')
 
-  <div class="panel">
-    <h5>Featured</h5>
-    <p>Pork drumstick turkey fugiat. Tri-tip elit turducken pork chop in. Swine short ribs meatball irure bacon nulla pork belly cupidatat meatloaf cow.</p>
-    <a href="#">Read More →</a>
-  </div>
+  @include('parts.static.panel')
 @endsection
