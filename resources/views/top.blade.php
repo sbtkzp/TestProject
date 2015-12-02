@@ -4,11 +4,7 @@
 ?>
 @extends('layouts.common')
 
-@section('title')
-@if(!empty($title))
-{{ $title.' - ' }}
-@endif
-@endsection
+@section('title', !empty($title) ? $title.' - ' : '')
 
 @section('stylesheets')
   <link rel="stylesheet" type="text/css" href="{{$path}}css/foundation.css">
