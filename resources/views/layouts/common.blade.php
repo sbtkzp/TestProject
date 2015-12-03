@@ -6,7 +6,7 @@
     @yield('javascripts')
   </head>
   <body>
-    @include('parts.header')
+    @include('parts.static.header')
     <div class="row">
       <div class="large-9 columns" role="content">
         @yield('main')
@@ -15,6 +15,6 @@
         @yield('sidebar')
       </aside>
     </div>
-    @include('parts.footer')
+    @include('parts.static.footer')
   </body>
 </html>
