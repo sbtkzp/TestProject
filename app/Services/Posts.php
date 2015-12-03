@@ -25,6 +25,17 @@ class Posts
         return $post;
     }
 
+    // 全件取得
+    static function getPostAll()
+    {
+        $posts = Post::all();
+        foreach ($posts as $post) {
+            self::setFormattedDate($post);
+        }
+
+        return $posts;
+    }
+
     private static function setFormattedDate($post)
     {
         $post->created_at_formatted = date_format($post->created_at, 'Y年m月d日 G:i');
