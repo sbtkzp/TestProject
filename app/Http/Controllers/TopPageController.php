@@ -24,7 +24,7 @@ class TopPageController extends Controller
         $data = new stdclass;
         $data->queryForUser = Users::getQuery();
         $data->queryForPost = Posts::getQuery();
-        $data->post = Posts::getPostData(1);
+        $data->posts = Posts::getPostAll();
         return view('top', ['data' => $data]);
     }
 

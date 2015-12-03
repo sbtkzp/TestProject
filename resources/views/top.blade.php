@@ -12,9 +12,10 @@
 @section('main')
 
   {{-- TODO foreach対応 --}}
-  @for($i = 0; $i < 2; $i++)
-    @include('parts.dynamic.post',['count' => $i, 'post' => $data->post])
-  @endfor
+  @foreach($data->posts as $key => $val)
+    @include('parts.dynamic.post',['post' => $val])
+    @if($key !== count($data->posts)-1 )<hr/>@endif
+  @endforeach
 
 @endsection
      
